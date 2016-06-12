@@ -24,5 +24,5 @@ build-image:
 	docker images | grep $(DOCKER_REPO)
 
 push-image:
-	docker push $(DOCKER_REPO)/$(APP_NAME):latest
-	docker push $(DOCKER_REPO)/$(APP_NAME):$(VERSION)
+	docker push $(DOCKER_REPO):latest
+	docker push $(DOCKER_REPO):$(VERSION)
