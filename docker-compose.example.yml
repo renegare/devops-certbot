@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  app:
+    image: renegare/devops-certbot:latest
+    volumes:
+      - ./server.js:/app/server.js
+      - ./tmp/le-etc:/etc/letsencrypt
+      - ./tmp/le-var:/var/lib/letsencrypt
+      - ./tmp/le-log:/var/log/letsencrypt
+    ports:
+      - 3000:3000
+    environment:
+      DEBUG: '*'
+      DRY_RUN: 'true'
+      STAGING: 'true'
+      DOMAINS: xxxx.ngrok.io
+      SMTP_HOST: smtp.gmail.com
+      SMTP_EMAIL: you@example.com
+      SMTP_PASS: XXX

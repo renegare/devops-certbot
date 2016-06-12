@@ -1,0 +1,10 @@
+# files
+.DS_Store
+VERSION
+docker-compose.yml
+*.log
+
+# dirs
+node_modules/
+.git/
+tmp/
