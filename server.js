@@ -74,9 +74,7 @@ const defer = (new Promise((resolve, reject) => {
   })
   .then(() => {
     info(`certs should have been generated and sent over to you :)`)
-    process.exit(0)
   })
   .catch(err => delay(1000).then(() => {
     error(err)
-    process.exit(1)
   }))
